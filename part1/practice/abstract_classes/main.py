@@ -38,10 +38,94 @@
 # экземпляр класса Person должен поочередно взаимодействовать с объектами Car, Boat, Electroscooter
 
 # код должен выполняться не выбрасывая исключений
+from abc import ABC, abstractmethod
 
-# TODO напишите Ваш код здесь
+
+class Transport(ABC):
+
+    @abstractmethod
+    def __init__(self):
+        pass
+
+    @abstractmethod
+    def start_engine(self):
+        pass
+
+    @abstractmethod
+    def stop_engine(self):
+        pass
+
+    @abstractmethod
+    def move(self):
+        pass
+
+    @abstractmethod
+    def stop(self):
+        pass
+
+class Boat(Transport):
+
+    def __init__(self):
+        pass
 
 
+    def start_engine(self):
+        pass
+
+
+    def stop_engine(self):
+        pass
+
+
+    def move(self):
+        pass
+
+
+    def stop(self):
+        pass
+
+
+class Car(Transport):
+
+    def __init__(self):
+        pass
+
+    def start_engine(self):
+        pass
+
+    def stop_engine(self):
+        pass
+
+    def move(self):
+        pass
+
+    def stop(self):
+        pass
+
+
+class Electroscooter(Transport):
+
+    def __init__(self):
+        pass
+
+    def start_engine(self):
+        pass
+
+    def stop_engine(self):
+        pass
+
+    def move(self):
+        pass
+
+    def stop(self):
+        pass
+
+class Person:
+    def __init__(self):
+        pass
+
+    def use_transport(self):
+        pass
 # Отрезок кода для самопроверки.
 # Запустите его, после того как выполните задание
 if __name__ == '__main__':
