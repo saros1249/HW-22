@@ -30,16 +30,33 @@ class Planet:
         return Country()
 
 
+# class Person:
+#     def __init__(self):
+#         self.planet = Planet()
+#
+#     def get_person_room(self):
+#         return self.planet.get_contry().get_city().get_street().get_room().get_name()
+#
+#     def get_city_population(self):
+#         return self.planet.get_contry().get_city().population()
+room = Room()
+city = City()
+city_population = city.population()
+room_num = room.get_name()
+
+
 class Person:
-    def __init__(self):
-        self.planet = Planet()
+    def __init__(self, city_population, room_num):
+        self.city_popultaion = city_population
+        self.room_num = room_num
 
     def get_person_room(self):
-        return self.planet.get_contry().get_city().get_street().get_room().get_name()
+        return self.room_num
 
     def get_city_population(self):
-        return self.planet.get_contry().get_city().population()
+        return self.city_popultaion
 
 
-# TODO после выполнения задания попробуйте
-# сделать экземпляр класса person и вызвать новые методы.
+person = Person(city_population, room_num)
+print(person.get_person_room())
+print(person.get_city_population())
